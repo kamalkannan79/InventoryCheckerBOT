@@ -32,8 +32,11 @@ pip install -r requirements.txt
 # Step 4: Set Up React Frontend
 Navigate to the React frontend folder and install all dependencies:
 
-cd chatbot 
-Run
+In terminal navigate to chatbot folder
+```bash
+cd chatbot
+```
+Then run this
 ```bash
 npm install
 ```
