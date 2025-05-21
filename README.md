@@ -36,7 +36,8 @@ Run "npm install"
 
 
 ---
-
+#step 5 : Start the application
+Navigate to start.bat and double click on it launch.
 
 
 
