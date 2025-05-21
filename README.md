@@ -4,7 +4,7 @@ This guide will help you set up the backend (FastAPI) and frontend (React) for t
 
 ---
 
-# ✅ Step 1: Create Python Virtual Environment
+# Step 1: Create Python Virtual Environment
 
 
 Open terminal in the root project folder
