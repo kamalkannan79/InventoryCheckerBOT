@@ -4,10 +4,15 @@ import json
 from collections import defaultdict
 import cx_Oracle
 
+from dotenv import load_dotenv
+import os
+# Load environment variables from .env file
+load_dotenv()
+GOOGLE_GEMINI_API_KEY = os.getenv("GOOGLE_GEMINI_API_KEY")
+if not GOOGLE_GEMINI_API_KEY:
+    raise ValueError("API key not found. Please set the GOOGLE_GEMINI_API_KEY environment variable.")
 
-
-
-genai.configure(api_key="AIzaSyAR6uKmEVXEmjooLVglX8PwP5lstGb-Pwc")
+genai.configure(api_key=GOOGLE_GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 

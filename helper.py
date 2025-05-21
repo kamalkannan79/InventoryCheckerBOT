@@ -1,7 +1,14 @@
 import google.generativeai as genai
 import re
+from dotenv import load_dotenv
+import os
+# Load environment variables from .env file
+load_dotenv()
+GOOGLE_GEMINI_API_KEY = os.getenv("GOOGLE_GEMINI_API_KEY")
+if not GOOGLE_GEMINI_API_KEY:
+    raise ValueError("API key not found. Please set the GOOGLE_GEMINI_API_KEY environment variable.")
 
-genai.configure(api_key="AIzaSyAi-_3gv4xOj3izFvgrsYxS2UFTG9FLy14")
+genai.configure(api_key=GOOGLE_GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 def interpret_question(question):
