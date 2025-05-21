@@ -1,0 +1,313 @@
+.App {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: #fff;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+.user-msg,
+.bot-msg {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 15px;
+  display: inline-block;
+  clear: both;
+}
+
+.user-msg {
+  background-color: #d1f8d1;
+  color: #000;
+  float: right;
+  text-align: left;
+}
+
+.bot-msg {
+  background-color: #f0f0f0;
+  color: #000;
+  float: left;
+  text-align: left;
+}
+
+/* Markdown Styling */
+.markdown {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.markdown p {
+  margin: 0;
+  word-wrap: break-word;
+}
+.markdown strong {
+  font-weight: bold;
+}
+.markdown em {
+  font-style: italic;
+}
+.markdown code {
+  background-color: #eaeaea;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+.markdown ul {
+  padding-left: 20px;
+  margin: 4px 0;
+}
+.markdown li {
+  margin-bottom: 4px;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-area input:focus {
+  border-color: #4CAF50;
+}
+
+/* Buttons */
+.input-area button {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.input-area button:nth-child(2) {
+  background-color: #4CAF50;
+}
+.input-area button:nth-child(2):hover {
+  background-color: #45a049;
+}
+
+.input-area button:nth-child(3) {
+  background-color: #f44336;
+}
+.input-area button:nth-child(3):hover {
+  background-color: #d73833;
+}
+
+/* Voice mic button */
+.voice-button {
+  background-color: #4CAF50;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-button:hover {
+  background-color: #45a049;
+}
+
+.voice-button.listening {
+  animation: pulse 1.2s infinite;
+  box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+.chat-header {
+  display: flex;
+  align-items: center; /* This vertically centers everything inside */
+  justify-content: space-between;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+
+.chat-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  color: gray;
+  margin-top: 4px;
+  text-align: right;
+}
+
+
+.user-msg .timestamp,
+.bot-msg .timestamp {
+  display: block;
+  font-size: 11px;
+  color: black;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.suggestions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  gap: 8px;
+  margin-top: 10px;
+  padding-left: 0px;
+}
+
+
+.suggestion-btn {
+  background-color: #d1f8d1;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  color: black;
+  max-width: 75%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+.suggestion-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.menu-button {
+  cursor: pointer;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  padding: 8px;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  min-width: 160px;
+  padding: 4px 0;
+  overflow: hidden;
+}
+
+.menu-dropdown button {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+}
+
+.menu-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+
+.suggestion-bubble {
+  background-color: #d1f8d1; 
+  border-radius: 16px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 75%;
+  align-self: flex-end;
+}
+
+.suggestion-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.suggestion-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%; 
+}
+
+
+.suggestion-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%; /* Make button stretch to full container width */
+  box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+.suggestion-btn:hover {
+  background-color: #e0e0e0;
+}
