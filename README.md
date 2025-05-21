@@ -10,8 +10,8 @@ This guide will help you set up the backend (FastAPI) and frontend (React) for t
 # Open terminal in the root project folder
 python -m venv .venv
 
-# Activate the virtual environment
-# For Windows:
+Activate the virtual environment
+For Windows:
 .venv\Scripts\activate
 
 
@@ -28,7 +28,7 @@ Ensure your virtual environment is activated, then install all required Python l
 
 pip install -r requirements.txt
 
-## Step 4: Set Up React Frontend
+# Step 4: Set Up React Frontend
 Navigate to the React frontend folder and install all dependencies:
 
 cd chatbot
