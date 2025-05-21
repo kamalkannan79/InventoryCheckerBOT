@@ -4,7 +4,7 @@ This guide will help you set up the backend (FastAPI) and frontend (React) for t
 
 ---
 
-## ✅ Step 1: Create Python Virtual Environment
+# ✅ Step 1: Create Python Virtual Environment
 
 
 # Open terminal in the root project folder
@@ -16,14 +16,14 @@ python -m venv .venv
 
 
 
-## Step 2: Create .env File
+# Step 2: Create .env File
 In the root folder, create a .env file and add the following environment variables:
 
 GOOGLE_GEMINI_API_KEY=your_google_gemini_api_key
 
 Replace each value (your_google_gemini_api_key, etc.) with your actual credentials.
 
-## Step 3: Install Python Dependencies
+# Step 3: Install Python Dependencies
 Ensure your virtual environment is activated, then install all required Python libraries:
 
 pip install -r requirements.txt
